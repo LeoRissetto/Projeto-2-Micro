@@ -1,9 +1,9 @@
 #line 1 "Z:/Users/leorissetto/Documents/GitHub/Projeto-2-Micro/MikroC/cronometro.c"
 
-char display7seg[10] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F};
+char display7seg[10] = {0x6F, 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F};
 
 unsigned char contador = 0;
-unsigned int periodo = 4000;
+unsigned int periodo = 1000;
 unsigned char start_count = 0;
 
 
@@ -31,8 +31,8 @@ void ConfigMCU()
 void ConfigTIMER()
 {
  T0CON = 0x87;
- TMR0H = (65536 - (periodo * 2)) >> 8;
- TMR0L = (65536 - (periodo * 2)) & 0xFF;
+ TMR0H = (65536 - (periodo * 8)) >> 8;
+ TMR0L = (65536 - (periodo * 8)) & 0xFF;
  INTCON.TMR0IF = 0;
  INTCON.TMR0IE = 1;
 }
@@ -49,7 +49,7 @@ void interrupt()
 
  if (INTCON.INT0IF)
  {
- periodo = 4000;
+ periodo = 1000;
  start_count = 1;
  INTCON.INT0IF = 0;
  }
@@ -57,7 +57,7 @@ void interrupt()
 
  if (INTCON3.INT1IF)
  {
- periodo = 1000;
+ periodo = 250;
  start_count = 1;
  INTCON3.INT1IF = 0;
  }
@@ -74,8 +74,8 @@ void interrupt()
  }
 
 
- TMR0H = (65536 - (periodo * 2)) >> 8;
- TMR0L = (65536 - (periodo * 2)) & 0xFF;
+ TMR0H = (65536 - (periodo * 8)) >> 8;
+ TMR0L = (65536 - (periodo * 8)) & 0xFF;
 
  INTCON.TMR0IF = 0;
  }

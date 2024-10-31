@@ -38,11 +38,17 @@ _ConfigTIMER:
 ;cronometro.c,32 :: 		T0CON = 0x87;                           // Timer0 ligado, 16 bits, prescaler 1:256
 	MOVLW       135
 	MOVWF       T0CON+0 
-;cronometro.c,33 :: 		TMR0H = (65536 - (periodo * 2)) >> 8;   // Carrega valor alto
+;cronometro.c,33 :: 		TMR0H = (65536 - (periodo * 8)) >> 8;   // Carrega valor alto
 	MOVF        _periodo+0, 0 
 	MOVWF       R0 
 	MOVF        _periodo+1, 0 
 	MOVWF       R1 
+	RLCF        R0, 1 
+	BCF         R0, 0 
+	RLCF        R1, 1 
+	RLCF        R0, 1 
+	BCF         R0, 0 
+	RLCF        R1, 1 
 	RLCF        R0, 1 
 	BCF         R0, 0 
 	RLCF        R1, 1 
@@ -73,7 +79,7 @@ _ConfigTIMER:
 	MOVWF       R3 
 	MOVF        R0, 0 
 	MOVWF       TMR0H+0 
-;cronometro.c,34 :: 		TMR0L = (65536 - (periodo * 2)) & 0xFF; // Carrega valor baixo
+;cronometro.c,34 :: 		TMR0L = (65536 - (periodo * 8)) & 0xFF; // Carrega valor baixo
 	MOVLW       255
 	ANDWF       R5, 0 
 	MOVWF       TMR0L+0 
@@ -111,10 +117,10 @@ _interrupt:
 ;cronometro.c,49 :: 		if (INTCON.INT0IF)
 	BTFSS       INTCON+0, 1 
 	GOTO        L_interrupt0
-;cronometro.c,51 :: 		periodo = 4000;    // Define o período para 1 segundo
-	MOVLW       160
+;cronometro.c,51 :: 		periodo = 1000;    // Define o período para 1 segundo
+	MOVLW       232
 	MOVWF       _periodo+0 
-	MOVLW       15
+	MOVLW       3
 	MOVWF       _periodo+1 
 ;cronometro.c,52 :: 		start_count = 1;   // Inicia a contagem
 	MOVLW       1
@@ -126,10 +132,10 @@ L_interrupt0:
 ;cronometro.c,57 :: 		if (INTCON3.INT1IF)
 	BTFSS       INTCON3+0, 0 
 	GOTO        L_interrupt1
-;cronometro.c,59 :: 		periodo = 1000;      // Define o período para 0,25 segundos
-	MOVLW       232
+;cronometro.c,59 :: 		periodo = 250;     // Define o período para 0,25 segundos
+	MOVLW       250
 	MOVWF       _periodo+0 
-	MOVLW       3
+	MOVLW       0
 	MOVWF       _periodo+1 
 ;cronometro.c,60 :: 		start_count = 1;    // Inicia a contagem
 	MOVLW       1
@@ -161,11 +167,17 @@ L_interrupt4:
 	CALL        _ExibirNumero+0, 0
 ;cronometro.c,73 :: 		}
 L_interrupt3:
-;cronometro.c,76 :: 		TMR0H = (65536 - (periodo * 2)) >> 8;   // Carrega valor alto
+;cronometro.c,76 :: 		TMR0H = (65536 - (periodo * 8)) >> 8;   // Carrega valor alto
 	MOVF        _periodo+0, 0 
 	MOVWF       R0 
 	MOVF        _periodo+1, 0 
 	MOVWF       R1 
+	RLCF        R0, 1 
+	BCF         R0, 0 
+	RLCF        R1, 1 
+	RLCF        R0, 1 
+	BCF         R0, 0 
+	RLCF        R1, 1 
 	RLCF        R0, 1 
 	BCF         R0, 0 
 	RLCF        R1, 1 
@@ -196,7 +208,7 @@ L_interrupt3:
 	MOVWF       R3 
 	MOVF        R0, 0 
 	MOVWF       TMR0H+0 
-;cronometro.c,77 :: 		TMR0L = (65536 - (periodo * 2)) & 0xFF; // Carrega valor baixo
+;cronometro.c,77 :: 		TMR0L = (65536 - (periodo * 8)) & 0xFF; // Carrega valor baixo
 	MOVLW       255
 	ANDWF       R5, 0 
 	MOVWF       TMR0L+0 
