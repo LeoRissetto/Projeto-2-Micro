@@ -32,6 +32,8 @@ O projeto foi desenvolvido utilizando o compilador MikroC PRO for PIC e testado 
 - **Display de 7 segmentos**: Mostra os números de 0 a 9.
 - **Temporizador TMR0 e interrupções**: Configurados para gerar os atrasos de 1 segundo e 0,25 segundos.
 
+<img src="1.png" width="400px">
+
 ## 4. Descrição
 ### Inicialização:
 - As portas RB0 e RB1 são configuradas como entrada para detectar os botões.
@@ -49,6 +51,8 @@ O projeto foi desenvolvido utilizando o compilador MikroC PRO for PIC e testado 
 
 ### Tabela de Segmentos:
 O display de 7 segmentos utiliza uma tabela de valores para representar os números de 0 a 9. A porta D controla o display com base nos valores armazenados na tabela.
+
+<img src="2.png" width="400px">
 
 ## 5. Resultados e Discussão
 O projeto foi implementado com sucesso no SimulIDE, atendendo aos seguintes requisitos:
