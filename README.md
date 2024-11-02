@@ -73,6 +73,10 @@ Aqui estão os GIFs demonstrando o funcionamento do cronômetro:
 
 Discussão: A implementação do cronômetro evidenciou a importância do uso de temporizadores e interrupções para o controle preciso do tempo e resposta aos botões. O controle via botões foi eficaz, demonstrando a capacidade do microcontrolador PIC18F4550 de gerenciar múltiplos eventos com precisão.
 
+### Comparação entre Projetos: PIC18F em C vs. 8051 em Assembly
+
+Este projeto atual, desenvolvido em linguagem C para o microcontrolador PIC18F, traz vantagens significativas em relação ao projeto anterior em Assembly para o 8051. A programação em C facilita a legibilidade e manutenção do código, permitindo abstrações mais elevadas e menor tempo de desenvolvimento. Além disso, o PIC18F oferece maior velocidade de processamento e mais recursos de hardware. No entanto, a implementação em Assembly no 8051 possui a vantagem de maior controle sobre o hardware, resultando em um código mais eficiente em termos de recursos.
+
 ## 6. Como executar o código
 
 Para executar o projeto e ver o cronômetro em ação, siga os passos abaixo:
