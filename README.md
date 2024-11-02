@@ -56,6 +56,17 @@ O projeto foi implementado com sucesso no SimulIDE, atendendo aos seguintes requ
 - **Alteração de intervalo de tempo**: O cronômetro altera a base de tempo corretamente entre 1 segundo e 0,25 segundos ao pressionar os botões de RB0 e RB1.
 - **Loop contínuo**: A contagem ocorre indefinidamente até que a simulação seja parada.
 
+### Exemplos do Funcionamento:
+Aqui estão os GIFs demonstrando o funcionamento do cronômetro:
+
+1. Contagem com intervalo de 0,25 segundos:
+
+2. Contagem com intervalo de 1 segundo:
+   
+   <img src="delay1s.gif" width="400px">
+
+3. Mudança entre contagens:
+
 Discussão: A implementação do cronômetro evidenciou a importância do uso de temporizadores e interrupções para o controle preciso do tempo e resposta aos botões. O controle via botões foi eficaz, demonstrando a capacidade do microcontrolador PIC18F4550 de gerenciar múltiplos eventos com precisão.
 
 ## 6. Como executar o código
