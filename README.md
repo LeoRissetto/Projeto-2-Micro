@@ -61,11 +61,15 @@ Aqui estão os GIFs demonstrando o funcionamento do cronômetro:
 
 1. Contagem com intervalo de 0,25 segundos:
 
-2. Contagem com intervalo de 1 segundo:
+   <img src="delay025s.gif" width="400px">
+
+3. Contagem com intervalo de 1 segundo:
    
    <img src="delay1s.gif" width="400px">
 
-3. Mudança entre contagens:
+4. Mudança entre contagens:
+
+   <img src="delaycompara.gif" width="400px">
 
 Discussão: A implementação do cronômetro evidenciou a importância do uso de temporizadores e interrupções para o controle preciso do tempo e resposta aos botões. O controle via botões foi eficaz, demonstrando a capacidade do microcontrolador PIC18F4550 de gerenciar múltiplos eventos com precisão.
 
