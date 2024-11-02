@@ -34,13 +34,13 @@ O projeto foi desenvolvido utilizando o compilador MikroC PRO for PIC e testado 
 
 ## 4. Descrição
 ### Inicialização:
-- A porta RB é configurada como entrada para detectar os botões RB0 e RB1.
+- As portas RB0 e RB1 são configuradas como entrada para detectar os botões.
 - O display de 7 segmentos está conectado à porta D, que exibe os números de 0 a 9.
 
 ### Funcionamento:
 1. O programa inicia com o display desligado. A contagem só começa quando RB0 ou RB1 são pressionados.
-2. **RB0**: Ao pressionar RB0, o cronômetro conta de 0 a 9 com um intervalo de 1 segundo.
-3. **RB1**: Ao pressionar RB1, o intervalo de contagem é alterado para 0,25 segundos.
+2. **RB0**: Ao pressionar o botão conectado em RB0, o cronômetro conta de 0 a 9 com um intervalo de 1 segundo.
+3. **RB1**: Ao pressionar o botão conectado em RB1, o intervalo de contagem é alterado para 0,25 segundos.
 4. **Loop**: A contagem é contínua, alternando entre os intervalos de tempo conforme o botão pressionado.
 
 ### Configuração do Temporizador e Interrupções:
@@ -53,7 +53,7 @@ O display de 7 segmentos utiliza uma tabela de valores para representar os núme
 ## 5. Resultados e Discussão
 O projeto foi implementado com sucesso no SimulIDE, atendendo aos seguintes requisitos:
 - **Contagem correta de 0 a 9**: O display de 7 segmentos exibe os números na ordem correta e a contagem reinicia ao chegar a 9.
-- **Alteração de intervalo de tempo**: O cronômetro altera a base de tempo corretamente entre 1 segundo e 0,25 segundos ao pressionar RB0 e RB1.
+- **Alteração de intervalo de tempo**: O cronômetro altera a base de tempo corretamente entre 1 segundo e 0,25 segundos ao pressionar os botões de RB0 e RB1.
 - **Loop contínuo**: A contagem ocorre indefinidamente até que a simulação seja parada.
 
 Discussão: A implementação do cronômetro evidenciou a importância do uso de temporizadores e interrupções para o controle preciso do tempo e resposta aos botões. O controle via botões foi eficaz, demonstrando a capacidade do microcontrolador PIC18F4550 de gerenciar múltiplos eventos com precisão.
