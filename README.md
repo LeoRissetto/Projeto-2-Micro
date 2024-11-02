@@ -9,7 +9,7 @@
 - Thiago Kashivagui Gonçalves (13676579)
 
 ## 1. Resumo
-Este projeto consiste no desenvolvimento de um cronômetro digital utilizando linguagem C para o microcontrolador PIC18F4550, implementado no kit EasyPIC v7 e simulado no SimulIDE. O cronômetro exibe números de 0 a 9 em um display de 7 segmentos, alternando entre intervalos de tempo de 1 segundo e 0,25 segundos, controlados por dois botões (RB0 e RB1). O projeto explora o uso de temporizadores e interrupções para controle da contagem de tempo.
+Este projeto consiste no desenvolvimento de um cronômetro digital utilizando linguagem C para o microcontrolador PIC18F4550, implementado no kit EasyPIC v7 e simulado no SimulIDE. O cronômetro exibe números de 0 a 9 em um display de 7 segmentos, alternando entre intervalos de tempo de 1 segundo e 0,25 segundos, controlados por dois botões. O projeto explora o uso de temporizadores e interrupções para controle da contagem de tempo.
 
 ## 2. Objetivos
 O objetivo deste projeto é explorar o funcionamento dos microcontroladores de 8 bits com arquitetura Harvard e set de instruções RISC, através da implementação de um cronômetro digital em linguagem C que utiliza botões, temporizadores e interrupções. Além disso, busca-se desenvolver habilidades na programação em C e no uso de periféricos do microcontrolador PIC18F4550.
@@ -28,7 +28,7 @@ O objetivo deste projeto é explorar o funcionamento dos microcontroladores de 8
 
 ### Métodos:
 O projeto foi desenvolvido utilizando o compilador MikroC PRO for PIC e testado no simulador SimulIDE com os seguintes componentes:
-- **Botões RB0 e RB1**: Utilizados para controlar o intervalo de tempo da contagem.
+- **Botões**: Utilizados para controlar o intervalo de tempo da contagem.
 - **Display de 7 segmentos**: Mostra os números de 0 a 9.
 - **Temporizador TMR0 e interrupções**: Configurados para gerar os atrasos de 1 segundo e 0,25 segundos.
 
