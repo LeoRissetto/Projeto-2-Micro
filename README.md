@@ -61,7 +61,7 @@ Aqui estão os GIFs demonstrando o funcionamento do cronômetro:
 
 1. Contagem com intervalo de 0,25 segundos:
 
-   <img src="delay025s.gif" width="400px">
+   <img src="delay025.gif" width="400px">
 
 3. Contagem com intervalo de 1 segundo:
    
