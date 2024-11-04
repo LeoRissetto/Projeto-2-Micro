@@ -9,7 +9,6 @@
 - Thiago Kashivagui Gonçalves (13676579)
 - Lucas Lima Romero (13676325)
 - Marco Antonio Gaspar Garcia (11833581)
-- Luciano Gonçalves Lopes Filho (13676520)
 
 ## 1. Resumo
 Este projeto consiste no desenvolvimento de um cronômetro digital utilizando linguagem C para o microcontrolador PIC18F4550, implementado no kit EasyPIC v7 e simulado no SimulIDE. O cronômetro exibe números de 0 a 9 em um display de 7 segmentos, alternando entre intervalos de tempo de 1 segundo e 0,25 segundos, controlados por dois botões. O projeto explora o uso de temporizadores e interrupções para controle da contagem de tempo.
