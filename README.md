@@ -7,6 +7,9 @@
 
 - Leonardo Gueno Rissetto (13676482)
 - Thiago Kashivagui Gonçalves (13676579)
+- Lucas Lima Romero (13676325)
+- Marco Antonio Gaspar Garcia (11833581)
+- Luciano Gonçalves Lopes Filho (13676520)
 
 ## 1. Resumo
 Este projeto consiste no desenvolvimento de um cronômetro digital utilizando linguagem C para o microcontrolador PIC18F4550, implementado no kit EasyPIC v7 e simulado no SimulIDE. O cronômetro exibe números de 0 a 9 em um display de 7 segmentos, alternando entre intervalos de tempo de 1 segundo e 0,25 segundos, controlados por dois botões. O projeto explora o uso de temporizadores e interrupções para controle da contagem de tempo.
@@ -32,7 +35,7 @@ O projeto foi desenvolvido utilizando o compilador MikroC PRO for PIC e testado 
 - **Display de 7 segmentos**: Mostra os números de 0 a 9.
 - **Temporizador TMR0 e interrupções**: Configurados para gerar os atrasos de 1 segundo e 0,25 segundos.
 
-<img src="1.png" width="400px">
+<img src="imagens/1.png" width="400px">
 
 ## 4. Descrição
 ### Inicialização:
@@ -52,7 +55,7 @@ O projeto foi desenvolvido utilizando o compilador MikroC PRO for PIC e testado 
 ### Tabela de Segmentos:
 O display de 7 segmentos utiliza uma tabela de valores para representar os números de 0 a 9. A porta D controla o display com base nos valores armazenados na tabela.
 
-<img src="2.png" width="400px">
+<img src="imagens/2.png" width="400px">
 
 ## 5. Resultados e Discussão
 O projeto foi implementado com sucesso no SimulIDE, atendendo aos seguintes requisitos:
@@ -65,15 +68,15 @@ Aqui estão os GIFs demonstrando o funcionamento do cronômetro:
 
 1. Contagem com intervalo de 0,25 segundos:
 
-   <img src="delay025.gif" width="400px">
+   <img src="gifs/delay025.gif" width="400px">
 
 3. Contagem com intervalo de 1 segundo:
    
-   <img src="delay1s.gif" width="400px">
+   <img src="gifs/delay1s.gif" width="400px">
 
 4. Mudança entre contagens:
 
-   <img src="delaycompara.gif" width="400px">
+   <img src="gifs/delaycompara.gif" width="400px">
 
 Discussão: A implementação do cronômetro evidenciou a importância do uso de temporizadores e interrupções para o controle preciso do tempo e resposta aos botões. O controle via botões foi eficaz, demonstrando a capacidade do microcontrolador PIC18F4550 de gerenciar múltiplos eventos com precisão.
 
